@@ -1,0 +1,34 @@
+{
+  "contacts": [
+    {
+      "id": "327db940-5ae1-4214-bb7d-cdaef32d98e7",
+      "name": "JFK",
+      "email": "apz@ammkzne.Fr"
+    },
+    {
+      "id": "c510fcf2-c2d3-4bd2-bf3c-b1f625b57b92",
+      "name": "akk",
+      "email": "juu@dze.fr"
+    },
+    {
+      "id": "0120c8c9-08ad-43f1-9e86-f70d3f3345fd",
+      "name": "user",
+      "email": "user@user.fr"
+    },
+    {
+      "id": "d246c1a8-9c33-46f2-9fd3-01805d293b95",
+      "name": "PPP",
+      "email": "pp@pp.fe"
+    },
+    {
+      "id": "b4f0abd4-8523-4028-83fb-3e11a42c87fd",
+      "name": "OK",
+      "email": "Ok@Ok.fr"
+    },
+    {
+      "id": "3e9a937c-a878-4cb8-9442-4b566ed3c283",
+      "name": "BOBO12",
+      "email": "bb@dee.fr"
+    }
+  ]
+}
