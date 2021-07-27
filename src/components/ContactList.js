@@ -1,16 +1,43 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import { Link } from 'react-router-dom';
 import ContactCard from './ContactCard';
 
-const ContactList = (props) =>{
-    console.log(props);
-    
+const ContactList = (props) => {
+    const inputElement = useRef("");
+
+    const deleteContactHandler = (id) => {
+        props.getContactId(id);
+    }
+
     const renderContactList = props.contacts.map((contact) => {
-        return <ContactCard contact={contact}></ContactCard>
+        return <ContactCard 
+            contact={contact} 
+            clickHandler={deleteContactHandler} 
+            key={contact.id}
+        />
     })
 
+    const getSearchTerm = () => {
+        props.searchKeyword(inputElement.current.value)
+    }
+
     return (
-        <div className="ui celled list">
-            {renderContactList}
+        <div className="main">
+            <h2>
+                Contact List
+                <Link to="/add">
+                    <button className="ui button blue right">Add Contact</button>
+                </Link>
+            </h2>
+            <div className="ui search">
+                <div className="ui icon input">
+                    <input ref={inputElement} className="prompt" type="text" name="" id="" placeholder="Search Contact" value={props.term} onChange={getSearchTerm} />
+                    <i className="search icon"></i>
+                </div>
+            </div>
+            <div className="ui celled list">
+                {renderContactList.length > 0 ? renderContactList : "No contact "}
+            </div>
         </div>
     )
 }
